@@ -1,0 +1,23 @@
+# ── Core service ─────────────────────────────────────────────────
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-multipart==0.0.20
+httpx==0.28.1
+
+# ── Local computer vision (CPU, no API keys) ─────────────────────
+# rembg pulls onnxruntime and the u2net segmentation model.
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+pillow==11.1.0
+rembg==2.0.61
+onnxruntime==1.20.1
+
+# ── Pose estimation ──────────────────────────────────────────────
+# Optional: the service falls back to a silhouette estimator if the
+# wheel is unavailable for your platform. See providers/pose.py.
+mediapipe==0.10.20
+
+# ── Hosted model providers ───────────────────────────────────────
+replicate==1.0.4
